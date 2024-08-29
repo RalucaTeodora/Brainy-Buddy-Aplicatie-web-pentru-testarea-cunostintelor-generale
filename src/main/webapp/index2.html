@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="imagini/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/index2.css" />
+    <title>Bainy Buddy Quiz</title>
+  </head>
+  <style>
+  
+  .logout-buton {
+  margin-right: 10px;
+  padding: 0.5rem 2rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  display: flex; 
+  justify-content: center; 
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  margin-left: 553px;
+  
+}
+.logout-buton:hover {
+	background-color: var(--primary-color-dark); 
+	transform: translateY(-2px);
+    box-shadow: var(--primary-color); 
+}
+.random-buton {
+	background-color: #32CD32;
+    color: white;
+    border: none;
+    padding: 0.5rem 2rem;
+    font-size: 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    display: flex; 
+    justify-content: center; 
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    }
+
+.random-buton:hover{
+   background-color: #28a428;
+   transform: translateY(-2px);
+   box-shadow: #1f7f1f;
+}
+  </style>
+  <body style="background-image: url('imagini/'); background-size: cover; background-position: center;">
+    
+				   <nav>
+				  <a href="index.html" class="logo-container" style="text-decoration: none;"> 
+				    <img src="imagini/brainy.png" alt="logo-site">
+				    <h1 class="logotitlu">Brainy Buddy</h1>
+				  </a> 
+				  <a href="login.jsp" class="logout-buton">Log OUT</a>
+				  <a href="randomquiz.html" class="random-buton">Random Quiz</a>
+				</nav>
+			<main class="main">
+			    <div class="separator"></div>
+			    <div class="butoane-navbar">
+        <a href="#quiz-start1" class="category-link">
+          <img src="imagini/it.png" alt="IT&Programare">
+          <span>IT&Programare</span>
+        </a>
+        <a href="#quiz-start2" class="category-link">
+          <img src="imagini/literatura.png" alt="Literatura">
+          <span>Literatură</span>
+        </a>
+        <a href="#quiz-start3" class="category-link">
+          <img src="imagini/istorie.png" alt="Istorie">
+          <span>Istorie</span>
+        </a>
+        <a href="#quiz-start4" class="category-link">
+          <img src="imagini/geografie.png" alt="Geografie">
+          <span>Geografie</span>
+        </a>
+        <a href="#quiz-start5" class="category-link">
+          <img src="imagini/stiinta.png" alt="Stiinta">
+          <span>Știință</span>
+        </a>
+      </div>
+
+			  
+	
+	      <section id="quiz-start1">
+	        <div class="quiz1">  
+	          <div class="quiz-image1">
+	            <img src="imagini/itquiz.png" alt="Quiz 1">
+	          </div>
+	          <hr class="separator">
+	          <div class="quiz-details1">
+	            <h2>IT & Limbaje de Programare</h2>
+	            <p>Descoperă cât de bine cunoști diverse aspecte ale IT-ului, de la noțiuni fundamentale până la detalii tehnice specifice limbajelor de programare populare. 
+	            Quiz-ul nostru este conceput pentru a fi atât educativ, cât și distractiv, oferindu-ți o oportunitate excelentă de a-ți evalua nivelul de cunoștințe.</p>
+	            <a href="quiz1.html" class="start-quiz-button">Start Quiz</a>
+	          </div>
+	        </div>
+	        </section>
+	        <section id="quiz-start2">
+	        <div class="quiz2">  
+	          <div class="quiz-image2">
+	            <img src="imagini/literaturequiz.jpg" alt="Quiz 2">
+	          </div>
+	          <div class="quiz-details2">
+	            <h2>Literatură</h2>
+	            <p>Descoperă minuni literare: O călătorie fascinantă prin paginile celebre ale literaturii mondiale - un quiz plin de întrebări care îți vorbesc despre poveștile, autorii și capodoperele care au definit cultura literară globală!</p>
+	            <a href="quiz2.html" class="start-quiz-button">Start Quiz</a>
+	          </div>
+	        </div>
+	        </section>
+	
+	        <section id="quiz-start3">
+	          <div class="quiz3">
+	            <div class="quiz-image3">
+	              <img src="imagini/istoriequiz.png" alt="Quiz 3">
+	            </div>
+	            <div class="quiz-details3">
+	              <h2>Istorie</h2>
+	              <p>Explorează evenimente istorice importante din întreaga lume. Descoperă date-cheie, figuri istorice și transformări culturale care au influențat cursul umanității. Potrivit pentru toți pasionații de istorie, indiferent de nivelul de cunoștințe.</p>
+	              <a href="quiz3.html" class="start-quiz-button">Start Quiz</a>
+	            </div>
+	          </div>
+	          </section>
+	
+	          <section id="quiz-start4">
+	          <div class="quiz4">  <div class="quiz-image4">
+	              <img src="imagini/geografiequiz.jpg" alt="Quiz 4">
+	            </div>
+	            <div class="quiz-details4">
+	              <h2>Geografie</h2>
+	              <p>Explorează lumea prin intermediul acestui quiz captivant de geografie. Descoperă continente, țări, capitale și caracteristici geografice remarcabile. Potrivit pentru toți cei interesați de diversitatea și frumusețea lumii noastre.</p>
+	              <a href="quiz4.html" class="start-quiz-button">Start Quiz</a>
+	            </div>
+	          </div>
+	          </section>
+	
+	          <section id="quiz-start5">
+	            <div class="quiz5">  <div class="quiz-image5">
+	                <img src="imagini/stiintaquiz.jpg" alt="Quiz 5">
+	              </div>
+	              <div class="quiz-details5">
+	                <h2>Știință</h2>
+	                <p>Descoperă fascinanta lume a științei prin acest quiz provocator. Explorează concepte din domenii precum biologia, fizica, chimia și multe altele. Perfect pentru curioșii care doresc să-și testeze cunoștințele și să descopere secretele universului nostru.</p>
+	                <a href="quiz5.html" class="start-quiz-button">Start Quiz</a>
+	              </div>
+	            </div>
+	            </section>
+
+	          <footer>
+	            <div class="footer-content">
+	              <h3>Contact</h3>
+	              <p>Adresa: Str. Traian nr. 123, Galați, România</p>
+	              <p>Email: brain.buddy@gmail.com</p>
+	              <p>Telefon: +1234567890</p>
+	            </div>
+	            
+	            <div class="footer-content">
+	              <h3>Link-uri utile</h3>
+	              <ul>
+	                <li><a href="aboutus.html">Despre noi</a></li>
+	                <li><a href="terms.html">Termeni și condiții</a></li>
+	              </ul>
+	            </div>
+	            
+	            <div class="footer-content">
+	              <p class="watermark">@Brainy Buddy, 2024</p>
+	            </div>
+	          </footer>
+	           
+	          </main>
+	    </div>
+	  </body>
+	</html>

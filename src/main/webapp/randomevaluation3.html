@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="imagini/favicon.ico" type="image/x-icon">
+    <title>Evaluare Quiz</title>
+    <link rel="stylesheet" href="css/quiz1.css">
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: var(--secondary-color);
+        }
+
+        .main {
+            max-width: var(--max-width);
+            margin-top: 100px;
+            margin: auto;
+            padding: 2rem;
+            background-color: var(--white);
+            border-radius: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .question-evaluation {
+            border-bottom: 1px solid var(--primary-color);
+            padding: 1rem 0;
+        }
+
+        .question-evaluation h3 {
+            color: var(--primary-color-dark);
+        }
+
+        .home-button{}
+
+        nav {
+            max-width: var(--max-width);
+            margin: auto;
+            padding: 1rem;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-radius: 20px;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo-container img {
+            width: 50px;
+            height: auto;
+            margin-right: 10px;
+        }
+
+        .logotitlu {
+            font-size: 32px;
+            font-weight: 700;
+            color: #60018f;
+            text-decoration: none;
+        }
+        .restart-button {
+            padding: 0.5rem 2rem;
+            color: var(--white);
+            background-color: #28E3AD;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 0 10px #8FF2D6;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            margin-left: 575px;
+        }
+
+        .restart-button:hover {
+            background-color: #8FF2D6;
+            transform: translateY(-2px);
+            box-shadow:rgb(188, 248, 232);
+        }
+
+      
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo-container" style="text-decoration: none;">
+            <img src="imagini/brainy.png" alt="logo-site">
+            <h1 class="logotitlu">Brainy Buddy</h1>
+        </a>
+        <a href="randomquiz2.html" class="restart-button">Restart Quiz</a>
+        <a href="index2.html" class="home-buton">Home</a>
+    </nav>
+
+    <main class="main" id="evaluation-container">
+        <h1>Evaluare Răspunsuri</h1>
+        <div id="evaluation-content"></div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const userAnswers = JSON.parse(localStorage.getItem('userAnswers'));
+            const questions = JSON.parse(localStorage.getItem('questions'));
+            const evaluationContent = document.getElementById('evaluation-content');
+
+            questions.forEach((question, index) => {
+                const userAnswer = userAnswers[index];
+                const correctAnswer = question.correct;
+                const isCorrect = userAnswer === correctAnswer;
+
+                const questionElement = document.createElement('div');
+                questionElement.classList.add('question-evaluation');
+                questionElement.innerHTML = `
+                    <h3>${question.question}</h3>
+                    <p>Răspunsul tău: <strong>${userAnswer || 'Niciun răspuns dat'}</strong></p>
+                    <p>Răspunsul corect: <strong>${correctAnswer}</strong></p>
+                    <p>Status: <strong style="color: ${isCorrect ? 'green' : 'red'};">${isCorrect ? 'Corect' : 'Incorect'}</strong></p>
+                `;
+                evaluationContent.appendChild(questionElement);
+            });
+
+            document.getElementById('back-home').addEventListener('click', () => {
+                window.location.href = 'index2.html';
+            });
+        });
+    </script>
+</body>
+</html>
